@@ -18,3 +18,21 @@ window.onload = function () {
         document.getElementById('cookie-banner').style.display = 'block';
     }
 }
+
+function loadContent(url) {
+    const contentElement = document.getElementById('content');
+    contentElement.classList.add('fade-out');
+
+
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+
+            contentElement.innerHTML = html;
+
+            setTimeout(() => {
+                contentElement.classList.remove('fade-out');
+            }, 100);
+        })
+        .catch(error => console.error('Error al cargar el contenido:', error));
+}

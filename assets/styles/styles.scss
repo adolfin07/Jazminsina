@@ -41,17 +41,16 @@ body {
 
             padding: 15px;
             border-radius: 10px;
-
-            background: linear-gradient(to right, #344E41, #588157);
-
             background-size: 200% 200%;
-            animation: bgcolors 5s ease infinite;
+            background: linear-gradient(to left, #588157, #344E41);
+            background-size: 200% 100%;
+            animation: gradientAnimation 5s ease-in-out infinite;
 
 
             .main__content-face {
                 background-color: var(--div-bg);
                 border-radius: 10px;
-                width: 30%;
+                min-width: 30%;
                 padding: 60px;
                 margin-right: 25px;
 
@@ -116,7 +115,7 @@ body {
             }
 
             .main__content-works {
-                width: 70%;
+                min-width: 70%;
                 flex-wrap: wrap;
                 display: flex;
                 align-items: center;
@@ -134,7 +133,7 @@ body {
                     border-radius: 5px;
 
                     transition: all 300ms ease-in-out;
-                   
+
                     position: relative;
                     z-index: 990;
 
@@ -187,7 +186,7 @@ body {
                     }
 
                     #p1 {
-                        margin-left: -10px;
+                        margin-left: -0px;
                     }
 
                     #p2 {
@@ -223,15 +222,15 @@ body {
                     }
 
                     #p6 {
-                        margin-left: 98px;
+                        margin-left: 100px;
                     }
 
                     #p7 {
-                        margin-left: 90px;
+                        margin-left: 95px;
                     }
 
                     #p8 {
-                        margin-left: 88px;
+                        margin-left: 100px;
                         font-size: 14.5px;
                     }
                 }
@@ -294,8 +293,36 @@ body {
     color: white;
 }
 
+.comi {
 
-@keyframes bgcolors {
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    animation: comiSlide 6s ease-in-out infinite;
+
+    a {
+        text-decoration: none;
+        color: var(--txt-color);
+    }
+}
+
+@keyframes comiSlide {
+    0% {
+        transform: translateY(50px);
+
+    }
+
+    50% {
+        transform: translateY(0px);
+
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
     }

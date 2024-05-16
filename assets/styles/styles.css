@@ -32,14 +32,15 @@ body {
   display: flex;
   padding: 15px;
   border-radius: 10px;
-  background: linear-gradient(to right, #344E41, #588157);
   background-size: 200% 200%;
-  animation: bgcolors 5s ease infinite;
+  background: linear-gradient(to left, #588157, #344E41);
+  background-size: 200% 100%;
+  animation: gradientAnimation 5s ease-in-out infinite;
 }
 .main .main__container .main__container-content .main__content-face {
   background-color: var(--div-bg);
   border-radius: 10px;
-  width: 30%;
+  min-width: 30%;
   padding: 60px;
   margin-right: 25px;
   box-shadow: 3px 3px 10px 5px rgba(17, 16, 16, 0.185);
@@ -84,7 +85,7 @@ body {
   background-color: var(--div-bg);
 }
 .main .main__container .main__container-content .main__content-works {
-  width: 70%;
+  min-width: 70%;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -135,7 +136,7 @@ body {
   font-size: 15px;
 }
 .main .main__container .main__container-content .main__content-works .names-1 #p1 {
-  margin-left: -10px;
+  margin-left: 0px;
 }
 .main .main__container .main__container-content .main__content-works .names-1 #p2 {
   margin-left: 30px;
@@ -160,13 +161,13 @@ body {
   margin-left: 75px;
 }
 .main .main__container .main__container-content .main__content-works .names-2 #p6 {
-  margin-left: 98px;
+  margin-left: 100px;
 }
 .main .main__container .main__container-content .main__content-works .names-2 #p7 {
-  margin-left: 90px;
+  margin-left: 95px;
 }
 .main .main__container .main__container-content .main__content-works .names-2 #p8 {
-  margin-left: 88px;
+  margin-left: 100px;
   font-size: 14.5px;
 }
 
@@ -219,7 +220,29 @@ body {
   color: white;
 }
 
-@keyframes bgcolors {
+.comi {
+  position: absolute;
+  top: 5%;
+  left: 18%;
+  animation: comiSlide 6s ease-in-out infinite;
+}
+.comi a {
+  text-decoration: none;
+  color: var(--txt-color);
+}
+
+@keyframes comiSlide {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
