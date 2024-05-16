@@ -94,6 +94,7 @@ body {
 .main .main__container .main__container-content .main__content-comis img {
   border-radius: 10px;
   width: 40%;
+  pointer-events: none;
 }
 
 .footer {
