@@ -155,3 +155,55 @@ body {
         background-position: 0% 50%;
     }
 }
+
+@media(max-width:1366px) {
+    .main__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main__container-content {
+        height: 80vh;
+    }
+
+    .main__content-face {
+        width: 30%;
+    }
+
+    .face__info {
+        h3 {
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+.comi {
+
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    animation: comiSlide 6s ease-in-out infinite;
+
+    a {
+        text-decoration: none;
+        color: var(--txt-color);
+    }
+}
+
+@keyframes comiSlide {
+    0% {
+        transform: translateY(50px);
+
+    }
+
+    50% {
+        transform: translateY(0px);
+
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}

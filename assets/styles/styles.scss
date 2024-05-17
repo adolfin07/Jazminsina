@@ -357,6 +357,27 @@ body {
     }
 }
 
+@media(max-width:1366px) {
+    .main__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .main__container-content {
+        height: 80vh;
+    }
+
+    .main__content-face {
+        width: 30%;
+    }
+
+    .face__info {
+        h3 {
+            font-size: 13px;
+        }
+    }
+}
+
 @media(max-width:1290px) {
     .main__content-works {
         padding: 0px 20px;
