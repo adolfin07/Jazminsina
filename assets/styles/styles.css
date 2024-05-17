@@ -236,15 +236,8 @@
   }
 }
 @media (max-width: 1090px) {
-  .main__container-content {
-    flex-direction: column;
-  }
-  .main__container-content .content-info {
-    height: 330px;
-    width: 100vw;
-  }
-  .main__container-content .content-works {
-    height: 330px;
-    width: 100%;
+  .main__container-content .content-works a {
+    height: 30%;
+    width: 20%;
   }
 }/*# sourceMappingURL=styles.css.map */

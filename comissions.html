@@ -8,7 +8,7 @@
     <!--icon-->
     <link rel="shortcut icon" href="assets/img/logoweb.png" type="image/x-icon">
     <!--styles-->
-    <link rel="stylesheet" href="assets/styles/comissions.css">
+    <link rel="stylesheet" href="assets/styles/comissions.css" type="text/css">
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,41 +23,44 @@
 </head>
 
 <body>
-    <main class="main">
-        <div class="main__container">
-            <div class="main__container-content">
-                <div class="main__content-face">
-                    <img src="assets/img/jaz-face.jfif" class="jaz-face" alt="">
-                    <div class="face__info">
-                        <h3>
+
+    <div class="body__container">
+
+        <main class="main">
+            <div class="main__container">
+                <div class="main__container-content">
+                    <div class="content-info">
+                        <div class="content-img">
+                            <img src="assets/img/jaz-face.jfif" id="jaz-face" alt="">
+                        </div>
+                        <div class="content-about">
                             Hola, mi nombre es Jazmín. Tengo 21 años y soy de México. Me gusta mucho escuchar a Kanye
                             West, Tyler, The Creator y Mac DeMarco. Me dedico medio tiempo a dibujar cositas que me
                             gustan y el otro tiempo a jugar juegos que también me gusten.
-                        </h3>
-                        <div class="twitter">
-                            <a href="https://twitter.com/JazTea19" target="_blank"><i
-                                    class="fa-brands fa-square-x-twitter"></i>
+                        </div>
+                        <div class="content-socials">
+
+                            <a href="https://twitter.com/JazTea19" target="_blank">
+                                <i class="fa-brands fa-square-x-twitter"></i>
                             </a>
-                            <a href="index.html">
-                                <i class="fa-solid fa-backward"></i>
+                            <a href="https://linktr.ee/JazTea" target="_blank">
+                                <i class="fa-solid fa-link"></i>
                             </a>
                         </div>
-
+                    </div>
+                    <div class="content-comissions">
+                        <img src="assets/img/comi0.jpeg" alt="">
+                        <img src="assets/img/comi1.jpeg" alt="">
                     </div>
                 </div>
-                <div class="main__content-comis">
-                    <img src="assets/img/comi0.jpeg" alt="">
-                    <img src="assets/img/comi1.jpeg" alt="">
-                </div>
             </div>
-        </div>
-    </main>
-    <footer class="footer">
-        &copy;JazFolio 2024
-    </footer>
+        </main>
+
+    </div>
+    <img src="assets/img/svg2.png" class="jojos2" alt="">
     <div class="comi">
-        <a href="index.html" target="_blank">
-            <p>¡MIRA MIS COMISIONES AQUÍ!</p>
+        <a href="index.html" class="comisa_a">
+            <p class="comisa">¡regresa a mis mejores trabajos!</p>
         </a>
     </div>
 </body>
@@ -67,9 +70,7 @@
 
 
 
-
-
-   <!--
+<!--
  <div id="cookie-banner">
         <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario.</p>
         <button onclick="aceptarCookies()">Aceptar cookies</button>
