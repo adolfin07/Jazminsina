@@ -22,11 +22,10 @@ body {
 }
 
 .main {
-  max-width: 1350px;
+  max-width: 1400px;
   margin: 0 auto;
+  margin-top: 85px;
   z-index: 5;
-  margin: 25px;
-  margin-top: 70px;
 }
 .main .main__container .main__container-content {
   display: flex;
