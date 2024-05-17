@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
+  color: var(--txt-color);
 }
 
 :root {
@@ -13,161 +14,170 @@
   --padd-img: #A3B18A;
 }
 
-body {
+.body__container {
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--txt-color);
 }
 
 .main {
   max-width: 1400px;
-  margin: 0 auto;
-  margin-top: 85px;
-  z-index: 5;
+  margin: auto;
+  z-index: 6;
 }
-.main .main__container .main__container-content {
-  display: flex;
-  padding: 15px;
-  border-radius: 10px;
-  background-size: 200% 200%;
+.main .main__container {
   background: linear-gradient(to left, #588157, #344E41);
   background-size: 200% 100%;
   animation: gradientAnimation 5s ease-in-out infinite;
+  border-radius: 10px;
+  margin: 0px 50px;
 }
-.main .main__container .main__container-content .main__content-face {
+.main .main__container .main__container-content {
+  background-color: rgba(52, 78, 65, 0);
+  padding: 50px;
+  display: flex;
+}
+.main .main__container .main__container-content .content-info {
+  width: 30%;
   background-color: var(--div-bg);
   border-radius: 10px;
-  min-width: 30%;
-  padding: 60px;
-  margin-right: 25px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 3px 3px 10px 5px rgba(17, 16, 16, 0.185);
-}
-.main .main__container .main__container-content .main__content-face .jaz-face {
-  border-radius: 50%;
-  width: 295px;
-  pointer-events: none;
-}
-.main .main__container .main__container-content .main__content-face .face__info h3 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: var(--div-bg);
-  text-align: center;
-  font-weight: 200;
-}
-.main .main__container .main__container-content .main__content-face .face__info .twitter {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: var(--div-bg);
-  width: 100%;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.199);
 }
-.main .main__container .main__container-content .main__content-face .face__info .twitter i {
-  font-size: 40px;
-  width: 100%;
-  margin-right: 15px;
-  background-color: var(--div-bg);
+.main .main__container .main__container-content .content-info .content-img {
+  background-color: rgba(52, 78, 65, 0);
+}
+.main .main__container .main__container-content .content-info .content-img img {
+  width: 90%;
+  border-radius: 50%;
+}
+.main .main__container .main__container-content .content-info .content-about {
+  background-color: rgba(52, 78, 65, 0);
+  margin-top: 20px;
+  text-align: center;
+}
+.main .main__container .main__container-content .content-info .content-socials {
+  background-color: rgba(52, 78, 65, 0);
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main .main__container .main__container-content .content-info .content-socials a {
+  background-color: rgba(52, 78, 65, 0);
+  font-size: 35px;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
-  color: var(--padd-img);
 }
-.main .main__container .main__container-content .main__content-face .face__info .twitter i:hover {
+.main .main__container .main__container-content .content-info .content-socials a i {
+  background-color: rgba(52, 78, 65, 0);
+  transition: all 300ms ease-in-out;
+}
+.main .main__container .main__container-content .content-info .content-socials i:hover {
   color: var(--bg-color);
 }
-.main .main__container .main__container-content .main__content-face .face__info .twitter p {
-  background-color: var(--div-bg);
-}
-.main .main__container .main__container-content .main__content-works {
+.main .main__container .main__container-content .content-works {
+  background-color: rgba(52, 78, 65, 0);
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: rgba(255, 0, 0, 0);
+  justify-self: center;
+  padding-left: 30px;
+  gap: 10px;
 }
-.main .main__container .main__container-content .main__content-works .img__mask {
-  display: inline-block;
-  width: 22%;
-  height: 31%;
-  overflow: hidden;
-  padding: 3px;
-  margin: 10px;
-  border-radius: 5px;
+.main .main__container .main__container-content .content-works a {
+  display: block;
+  height: 45%;
+  width: 23%;
+  border-radius: 10px;
   transition: all 300ms ease-in-out;
-  position: relative;
-  z-index: 990;
 }
-.main .main__container .main__container-content .main__content-works .img__mask:hover {
-  transform: translateY(-30px);
-  opacity: 1;
+.main .main__container .main__container-content .content-works .work__mask {
+  border-radius: 10px;
+  transition: all 300ms ease-in-out;
 }
-.main .main__container .main__container-content .main__content-works img {
+.main .main__container .main__container-content .content-works a:hover {
+  transform: translateY(-60px);
+}
+.main .main__container .main__container-content .content-works .work__mask:hover {
+  transform: scale(1.01);
+}
+.main .main__container .main__container-content .content-works #mask1 {
+  background-image: url(../img/1.jfif);
   height: 100%;
   width: 100%;
-  transition: all 400ms ease-in-out;
-  cursor: pointer;
-  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works img:hover {
-  transform: scale(1.1);
+.main .main__container .main__container-content .content-works #mask2 {
+  background-image: url(../img/2.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-1 {
-  position: absolute;
-  top: 38%;
-  right: 300px;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex;
-  width: 49%;
-  padding-left: 50px;
+.main .main__container .main__container-content .content-works #mask3 {
+  background-image: url(../img/3.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-1 p {
-  background-color: rgba(255, 255, 255, 0);
-  font-size: 15px;
+.main .main__container .main__container-content .content-works #mask4 {
+  background-image: url(../img/4.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-1 #p1 {
-  margin-left: 0px;
+.main .main__container .main__container-content .content-works #mask5 {
+  background-image: url(../img/5.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-1 #p2 {
-  margin-left: 30px;
+.main .main__container .main__container-content .content-works #mask6 {
+  background-image: url(../img/6.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-1 #p3 {
-  margin-left: 68px;
+.main .main__container .main__container-content .content-works #mask7 {
+  background-image: url(../img/7.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-1 #p4 {
-  margin-left: 120px;
+.main .main__container .main__container-content .content-works #mask8 {
+  background-image: url(../img/8.jfif);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
-.main .main__container .main__container-content .main__content-works .names-2 {
-  position: absolute;
-  bottom: 215px;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex;
-}
-.main .main__container .main__container-content .main__content-works .names-2 p {
-  background-color: rgba(255, 255, 255, 0);
-  font-size: 15px;
-}
-.main .main__container .main__container-content .main__content-works .names-2 #p5 {
-  margin-left: 75px;
-}
-.main .main__container .main__container-content .main__content-works .names-2 #p6 {
-  margin-left: 100px;
-}
-.main .main__container .main__container-content .main__content-works .names-2 #p7 {
-  margin-left: 95px;
-}
-.main .main__container .main__container-content .main__content-works .names-2 #p8 {
-  margin-left: 100px;
-  font-size: 14.5px;
+.main .main__container .main__container-content .work__text {
+  margin-top: -25px;
+  text-align: center;
 }
 
-.footer {
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  padding: 50px;
-  margin-bottom: -50px;
+.comi {
+  z-index: 5;
+  position: absolute;
+  top: 10%;
+  left: 18%;
+  border: 1px solid var(--txt-color);
+  padding: 5px 7px;
+  border-radius: 10px;
+  animation: comiSlide 6s ease-in-out infinite;
+}
+.comi a {
+  text-decoration: none;
 }
 
 .jojos2 {
@@ -177,79 +187,42 @@ body {
   pointer-events: none;
 }
 
-#cookie-banner {
-  position: absolute;
-  bottom: 40%;
-  left: 25%;
-  width: 50%;
-  background-color: rgba(51, 51, 51, 0.5607843137);
-  border-radius: 10px;
-  color: #fff;
-  padding: 80px 90px;
-  text-align: center;
-  z-index: 999;
-  animation: cookie 300ms linear;
-}
-#cookie-banner p {
-  background-color: rgba(51, 51, 51, 0);
-  margin-bottom: 20px;
-}
-
-#cookie-banner button {
-  background-color: #f8f9fa;
-  color: #333;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  margin-left: 10px;
-  border-radius: 10px;
-  transition: all 300ms ease-in-out;
-}
-
-#cookie-banner button:hover {
-  background-color: var(--div-bg);
-  color: white;
-}
-
-.comi {
-  position: absolute;
-  top: 5%;
-  left: 18%;
-  animation: comiSlide 6s ease-in-out infinite;
-}
-.comi a {
-  text-decoration: none;
-  color: var(--txt-color);
-}
-
-@keyframes comiSlide {
-  0% {
-    transform: translateY(50px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
 @keyframes gradientAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 25%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 25%;
   }
 }
-@keyframes cookie {
+@keyframes comiSlide {
   0% {
-    transform: scale(0.6);
+    transform: translateY(70px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(70px);
   }
 }
-@media (max-width: 1440px) {
+@media (max-width: 1366px) {
+  .comi {
+    z-index: 5;
+    position: absolute;
+    top: 1%;
+    left: 18%;
+    border: 1px solid var(--txt-color);
+    padding: 5px 7px;
+    border-radius: 10px;
+    animation: comiSlide 6s ease-in-out infinite;
+  }
+  .comi a {
+    text-decoration: none;
+  }
   @keyframes comiSlide {
     0% {
       transform: translateY(50px);
@@ -262,65 +235,16 @@ body {
     }
   }
 }
-@media (max-width: 1366px) {
-  .main__container {
-    width: 90%;
-    margin: 0 auto;
-  }
+@media (max-width: 1090px) {
   .main__container-content {
-    height: 80vh;
-  }
-  .main__content-face {
-    width: 30%;
-  }
-  .face__info h3 {
-    font-size: 13px;
-  }
-}
-@media (max-width: 1290px) {
-  .main__content-works {
-    padding: 0px 20px;
-  }
-}
-@media (max-width: 1256px) {
-  .face__info h3 {
-    font-size: 15px;
-  }
-}
-@media (max-width: 1174px) {
-  .main__container-content {
-    display: flex;
     flex-direction: column;
-    height: 1300px;
   }
-  .main__content-works {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    background-color: rgba(255, 0, 0, 0);
+  .main__container-content .content-info {
+    height: 330px;
+    width: 100vw;
   }
-  .img__mask {
-    display: inline-block;
+  .main__container-content .content-works {
+    height: 330px;
     width: 100%;
-    height: 100%;
-    padding: 3px;
-    margin: 10px;
-    border-radius: 5px;
-    transition: all 300ms ease-in-out;
-    position: relative;
-    z-index: 990;
-  }
-}
-@media (max-width: 1174px) and (max-width: 985px) {
-  .main__content-works {
-    background-color: red;
-  }
-}
-@media (max-width: 1026px) {
-  .main__content-face {
-    height: 20%;
-  }
-  .main__content-face .jaz-face {
-    width: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */
