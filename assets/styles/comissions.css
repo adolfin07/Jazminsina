@@ -4,14 +4,15 @@
   box-sizing: border-box;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
+  font-weight: bold;
   color: var(--txt-color);
 }
 
 :root {
-  --bg-color: #344E41;
+  --bg-color: #344e41;
   --div-bg: #588157;
-  --txt-color: #DAD7CD;
-  --padd-img: #A3B18A;
+  --txt-color: #dad7cd;
+  --padd-img: #a3b18a;
 }
 
 .body__container {
@@ -25,7 +26,7 @@
   z-index: 6;
 }
 .main .main__container {
-  background: linear-gradient(to left, #588157, #344E41);
+  background: linear-gradient(to left, #588157, #344e41);
   background-size: 200% 100%;
   animation: gradientAnimation 5s ease-in-out infinite;
   border-radius: 10px;
@@ -100,12 +101,11 @@
 .comi {
   z-index: 5;
   position: absolute;
-  top: 10%;
-  left: 18%;
+  top: 70px;
+  left: 310px;
+  padding: 7px 15px;
   border: 1px solid var(--txt-color);
-  padding: 5px 7px;
-  border-radius: 10px;
-  animation: comiSlide 6s ease-in-out infinite;
+  border-radius: 4px;
 }
 .comi a {
   text-decoration: none;
@@ -127,16 +127,5 @@
   }
   100% {
     background-position: 0% 25%;
-  }
-}
-@keyframes comiSlide {
-  0% {
-    transform: translateY(70px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(70px);
   }
 }/*# sourceMappingURL=comissions.css.map */
